@@ -34,16 +34,16 @@ A string is balanced if it consists of exactly two different characters and both
 ## chkBalancedstring Function:
 The chkBalancedstring function checks whether a given string is balanced according to the rules defined in the problem. It uses an object charsObjCounts to count the occurrences of each character in the string.
 If there are exactly two different characters and they appear the same number of times, the function returns true, indicating that the string is balanced.
-## resolveBalancedSubstrings Function:
-The main function, resolveBalancedSubstrings, takes a string inputStr as input.
+## getBalancedSubstrings Function:
+The main function, getBalancedSubstrings, takes a string S as input.
 It initializes an empty array output to store the balanced substrings.
 It defines the nested chkBalancedstring function for checking balance within substrings.
 ## Nested Loop:
-The function uses two nested loops to iterate through all possible substrings of inputStr.
+The function uses two nested loops to iterate through all possible substrings of S.
 The outer loop (i) represents the starting index of the substring, and the inner loop (j) represents the ending index.
 It considers all substrings of length 2 or more.
 ## Substring Extraction:
-   For each pair of indices (i, j), it extracts the substring using inputStr.substring(i, j).
+   For each pair of indices (i, j), it extracts the substring using S.substring(i, j).
 ## Balance Check:
    It then calls the chkBalancedstring function to check if the substring is balanced.
    If balanced, the substring is added to the output array.
