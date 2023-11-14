@@ -9,11 +9,11 @@ function chkBalancedstring(stringValue) {
 }
 
 
-function resolveBalancedSubstrings(inputStr) {
+function getBalancedSubstrings(S) {
     const output = [];
-    for (let i = 0; i < inputStr.length; i++) {
-        for (let j = i + 2; j <= inputStr.length; j++) {
-            const substring = inputStr.substring(i, j);
+    for (let i = 0; i < S.length; i++) {
+        for (let j = i + 2; j <= S.length; j++) {
+            const substring = S.substring(i, j);
             if (chkBalancedstring(substring)) output.push(substring);
         }
     }
@@ -22,5 +22,4 @@ function resolveBalancedSubstrings(inputStr) {
     return output.filter(str => str.length === maximumLength);
 }
 
-console.log(resolveBalancedSubstrings("cabbacc"));
-
+console.log(getBalancedSubstrings("cabbacc"));
